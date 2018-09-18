@@ -1,0 +1,43 @@
+<script src="https://npmcdn.com/vue/dist/vue.js"></script>
+
+<div id="exercise">
+    <p>1. Show a "result" of 'Not There Yet' as long as "value" is not equal to 45 - you can change "value" with the buttons.
+        Print 'Done' once you did it
+    </p>
+    <div>
+        <p>Current Value: {{ value }}</p>
+        <button @click="value += 5">Add 5</button>
+        <button @click="value += 1">Add 1</button>
+        <p>{{ result }}</p>
+    </div>
+    <p>2. Watch for changes in the "result" and reset the "value" after 5 seconds </p>
+    <div>
+        Enter milliseconds: <input v-model="time" type="text">
+        <p>{{ value }}</p>
+    </div>
+</div>
+
+<script>
+    new Vue({
+        el: '#exercise',
+        data: {
+            value: 0,
+            time: 5000
+        },
+        computed: {
+             result: function(){
+                return this.value === 45 ? "Done" : "Not There Yet";
+            }
+        },
+        watch: {
+            value: function(){
+                if (this.result === "Done") {
+                    var vm = this;
+                    setTimeout(function() {
+                      vm.value = 0;
+                    }, vm.time);
+                }
+            }
+        }
+    });
+</script>
