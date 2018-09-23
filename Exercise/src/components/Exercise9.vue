@@ -63,8 +63,7 @@ a {
 .custom-directive-container {
   margin: 5px;
   padding: 5px;
-  border: 5px solid #42b983;
-  width: 500px;
+  border: 2px solid #42b983;
   position: relative;
 }
 </style>
