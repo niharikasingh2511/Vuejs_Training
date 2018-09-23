@@ -5,9 +5,15 @@
       <li>
         <router-link to="/Exercise6">Exercise - 6</router-link>
       </li>
-        <li>
-          <router-link to="/Exercise7">Exercise - 7</router-link>
-        </li>
+      <li>
+        <router-link to="/Exercise7">Exercise - 7</router-link>
+      </li>
+      <li>
+        <router-link to="/Exercise8">Exercise - 8</router-link>
+      </li>
+      <li>
+        <router-link to="/Exercise9">Exercise - 9</router-link>
+      </li>
     </ul>
   </div>
 </template>

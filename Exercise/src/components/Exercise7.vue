@@ -40,7 +40,7 @@ export default {
   },
   data() {
     return {
-      msg: "vue js Excercise 7",
+      msg: "Excercise 7",
 
       selectedComponent: ""
     };
