@@ -8,14 +8,8 @@ const state = {
   myStocks: []
 }
 
-const changePrice = (price) => {
-  let change = Number((Math.random() * 1.900 + 0.100).toFixed(3))
-  change = change * (Math.floor(Math.random() * 2) === 1 ? 1 : -1)
-  if ((price += change) < 0) {
-    return 0.01
-  }
-  return price
-}
+const changePrice = (price) => (price += Number(Math.random().toFixed(2)))
+
 const dayEnd = (stocks) => {
   stocks.map(stock => {
     stock.price = changePrice(stock.price)
