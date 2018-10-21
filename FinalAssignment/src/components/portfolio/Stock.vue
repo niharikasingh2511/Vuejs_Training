@@ -18,7 +18,7 @@
                     <div class="form-row">
                         <div class="form-group col-12">
                             <button :disabled="quantity <= 0 || checkAvaliableQuantity" :class="(checkAvaliableQuantity ? 'btn-danger' : 'btn-primary')" type="button" class="btn btn-block" @click="sell">
-                            {{ checkAvaliableQuantity ? 'Too Much Quantity' : 'Sell' }}
+                            {{ checkAvaliableQuantity ? 'reduce quantity to sell' : 'Sell' }}
                           </button>
                         </div>
                     </div>

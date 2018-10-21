@@ -1,7 +1,7 @@
 <template>
     <div class="col-md-12" >
        <div v-if="portfolio.length === 0" class="text-center my-4 alert alert-warning" role="alert">
-            You dont have any stock to show here
+            No Stocks
         </div>
       <div class="row">
         <app-stock v-for="(stock, stock_id) in portfolio" :stock="stock" :key="stock_id"></app-stock>
